@@ -1,0 +1,126 @@
+:root{
+    --fontsize-text: 1.2rem;
+    --width-content: 60vw;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-size: var(--fontsize-text);
+    font-family: 'Baskervville', serif;
+    color: linen;
+}
+html{
+    background-color: rgb(20,30,40);
+}
+a{
+    text-decoration: none;
+    border: none;
+}
+
+
+/* heading */
+header{
+    padding: 0 auto;
+}
+.hero-img{
+    display: block;
+    width: var(--width-content);
+    height: auto;
+    margin: 0 auto;
+}
+.title{
+    font-family: Anton ;
+    font-size: calc(4 * var(--fontsize-text));
+}
+.title, .subtitle{
+    color: orangered;
+    text-align: center;
+}
+
+main{
+    display: block;
+    width: var(--width-content);
+    margin: 0 auto;
+}
+/* author */
+.blowheading{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 50px 0;
+    
+}
+.authorlink:hover{
+    background-color: green;
+}
+.publish-date{
+    color: gray;
+}
+.social-icons{
+    grid-column: 2/ span 2;
+    display: flex;
+    padding-left: 100px;
+    justify-content: space-around;
+}
+.social-icons i{
+    font-size: calc(1.5* var(--fontsize-text));
+}
+
+/* text main */
+.text{
+    column-count: 3;
+    column-width: auto;
+    column-gap: 25px;
+    word-spacing: 1.5px;
+}
+p{
+    font-size: calc(var(--fontsize-text) * 0.9);
+    text-align: justify;
+
+}
+.first.subtext::first-letter{
+    font-size: calc(var(--fontsize-text) * 3);
+    float: left;
+    color: orangered;
+    margin-right: 5px;
+}
+
+/* quote */
+hr{
+    border: 1px solid rgba(120, 120, 120, 0.6);
+    margin: 15px 0;
+}
+.quote{
+    font-family: "Raleway", sans-serif;
+    color: #00beef;
+    font-size: calc(var(--fontsize-text) * 1.1);
+    text-align: center;
+}
+.quote::after, .quote::before{
+    content: '"';
+}
+
+/* history and image */
+.history-and-image {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.history {
+    grid-column: 1/ span 1;
+}
+
+.img-wrapper {
+    grid-column: 2/ span 1;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: min-content min-content min-content;
+    column-gap: 10px;
+}
+
+.img-wrapper .image-1 {
+    width: 100%;
+    grid-column: 1/ span 2;
+}
+
